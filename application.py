@@ -9,6 +9,10 @@ app = Flask(__name__)
 @app.route("/getExchangeRate/<fromCurrency>/<toCurrency>")
 def profile(fromCurrency, toCurrency):
 
+
+    print("From currency: " + fromCurrency)
+    print("To currency: " + toCurrency)
+
     url = "http://api.nbp.pl/api/exchangerates/tables/a/"
     json_obj = urllib.request.urlopen(url)
 
